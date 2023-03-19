@@ -12,8 +12,9 @@ public class OrderPage {
 		System.out.println("Get Order");
 	}
 	
-	public void getPrice()
+	public void getPrice(int quantity, float price)
 	{
-		System.out.println("Get Price");
+		float totalPrice = price * quantity;
+		System.out.println("Total Price: " + totalPrice);
 	}
 }
