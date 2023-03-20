@@ -7,6 +7,6 @@ public class HomePage {
   
   public void verifyHomePageLogo()
   {
-    System.out.println("Home Page Logo Verification");
+    System.out.println("Home Page Logo Verification   -----   Other Developer");
   }
 }
