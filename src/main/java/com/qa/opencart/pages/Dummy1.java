@@ -6,7 +6,7 @@ public class Dummy1 {
 		System.out.println("Dummy1");
 
 	}
-	
+
 	public static void m(String a) {
 		System.out.println("Method m");
 
@@ -16,5 +16,4 @@ public class Dummy1 {
 		System.out.println("Method m");
 
 	}
-
 }
