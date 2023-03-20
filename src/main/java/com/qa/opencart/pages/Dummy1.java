@@ -11,5 +11,10 @@ public class Dummy1 {
 		System.out.println("Method m");
 
 	}
+	
+	public static void m2(String a) {
+		System.out.println("Method m");
+
+	}
 
 }
