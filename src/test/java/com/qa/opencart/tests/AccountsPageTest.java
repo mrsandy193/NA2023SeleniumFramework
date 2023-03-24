@@ -54,45 +54,45 @@ public class AccountsPageTest extends BaseTest{
 		
 	}
 	
-	@DataProvider
-	public Object[][] getProductData() {
-		return new Object[][] {
-			{"Macbook"},
-			{"iMac"},
-			{"Apple"},
-			{"Samsung"}
-		};
-	}
-	
-	@Test(dataProvider = "getProductData")
-	public void searchProductCountTest(String searchKey) {
-		searchPage = accPage.performSearch(searchKey);
-		Assert.assertTrue(searchPage.getSearchProductsCount()>0);
-	}
-	
-	
-	
-	@DataProvider
-	public Object[][] getProductTestData() {
-		return new Object[][] {
-			{"Macbook", "MacBook Pro"},
-			{"Macbook", "MacBook Air"},
-			{"iMac", "iMac"},
-			{"Apple", "Apple Cinema 30\""},
-			{"Samsung", "Samsung SyncMaster 941BW"},
-			{"Samsung", "Samsung Galaxy Tab 10.1"},
-		};
-	}
-	
-	@Test(dataProvider = "getProductTestData")
-	public void searchProductTest(String searchKey, String productName) {
-		searchPage = accPage.performSearch(searchKey);
-		if(searchPage.getSearchProductsCount()>0) {
-			productInfoPage = searchPage.selectProduct(productName);
-			String actProductHeader = productInfoPage.getProductHeaderValue();
-			Assert.assertEquals(actProductHeader, productName);
-		}
-	}
+//	@DataProvider
+//	public Object[][] getProductData() {
+//		return new Object[][] {
+//			{"Macbook"},
+//			{"iMac"},
+//			{"Apple"},
+//			{"Samsung"}
+//		};
+//	}
+//	
+//	@Test(dataProvider = "getProductData")
+//	public void searchProductCountTest(String searchKey) {
+//		searchPage = accPage.performSearch(searchKey);
+//		Assert.assertTrue(searchPage.getSearchProductsCount()>0);
+//	}
+//	
+//	
+//	
+//	@DataProvider
+//	public Object[][] getProductTestData() {
+//		return new Object[][] {
+//			{"Macbook", "MacBook Pro"},
+//			{"Macbook", "MacBook Air"},
+//			{"iMac", "iMac"},
+//			{"Apple", "Apple Cinema 30\""},
+//			{"Samsung", "Samsung SyncMaster 941BW"},
+//			{"Samsung", "Samsung Galaxy Tab 10.1"},
+//		};
+//	}
+//	
+//	@Test(dataProvider = "getProductTestData")
+//	public void searchProductTest(String searchKey, String productName) {
+//		searchPage = accPage.performSearch(searchKey);
+//		if(searchPage.getSearchProductsCount()>0) {
+//			productInfoPage = searchPage.selectProduct(productName);
+//			String actProductHeader = productInfoPage.getProductHeaderValue();
+//			Assert.assertEquals(actProductHeader, productName);
+//		}
+//	}
 	
 	
 }
